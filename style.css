@@ -1,0 +1,105 @@
+:root{
+    --btn-bgcolor: ;
+
+
+    --fontsize-h1:2rem;
+    --fontsize-h2:.8rem;
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+}
+
+body{
+    font-family: "Spartan", sans-serif;
+}
+
+h1{
+    font-size: var(--fontsize-h1);
+}
+
+h2{
+    font-size: var(--fontsize-h2);
+    letter-spacing: .5px;
+    margin-bottom: 4px;
+    margin-right: 1.25rem;
+}
+
+section{
+    padding: 1.5rem;
+}
+
+div{
+    display: flex;
+}
+
+input{
+    font-size: 2rem;
+    padding: .9rem;
+    text-align: end;
+    width: 100%;
+    margin: 1.5rem 0 1rem;
+    border-radius: .4rem;
+    border-style: none;
+}
+
+button{
+    font-size: 2rem;
+    border-style: none;
+    padding: 1rem;
+    /* flex-grow: 1; */
+    flex: 1 0 20%;
+    border-radius: .4rem;
+    /* background-color: var(--btn-bgcolor); */
+}
+
+.grid{
+    flex-wrap: wrap;
+    gap: .9rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.grid--fontsize{
+    font-size: .9rem;
+}
+
+.grid--padding{
+    padding: 1.5rem;
+}
+
+/*TOP SECTION*/
+
+.top{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    border: 1px solid black;
+    width: 70px;
+    padding: 0.2rem;
+    border-radius: 2rem;
+}
+
+.toggle__circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+.theme__choices{
+    flex-direction: column;
+}
+
+.theme__numbers{
+    justify-content: space-around;
+}
+
+.theme{
+    align-items: flex-end;
+}

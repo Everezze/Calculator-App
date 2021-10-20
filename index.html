@@ -5,39 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
     <title>Calculator App</title>
 </head>
 <body>
     
-    <div>
-        <div>
+    <section>
+
+        <div class="top">
             <h1>calc</h1>
             
-            <div>
-                <h2>theme</h2>
-                <div>
-                    <div>
+            <div class="theme">
+                <h2>THEME</h2>
+
+                <div class="theme__choices">
+                    <div class="theme__numbers">
                         <p>1</p>
                         <p>2</p>
                         <p>3</p>
                     </div>
 
-                    <div> <!--here is the toggle button-->
-                        <div></div>
+                    <div class="toggle"> <!--here is the toggle button-->
+                        <div class="toggle__circle"></div>
                     </div>
                    
                 </div>
             </div>
-
         </div>
 
         <input type="text">
 
-        <div>
+        <div class="grid">
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button>DEL</button>
+            <button class="grid--fontsize">DEL</button>
             <button>4</button>
             <button>5</button>
             <button>6</button>
@@ -50,10 +54,11 @@
             <button>0</button>
             <button>/</button>
             <button>x</button>
-            <button>RESET</button>
-            <button>=</button>
+            <button class="grid--fontsize grid--padding">RESET</button>
+            <button class="grid--fontsize grid--padding">=</button>
         </div>
-    </div>
+
+    </section>
 
     <script src="calculator.js"></script>
 </body>
