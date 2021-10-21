@@ -1,21 +1,23 @@
 :root{
 
     /*MAIN BACKGROUNDS*/
-    --mainBg: ;
-    --toggleAndKeypadBg: ;
-    --inputBg: ;
+    --mainBg: hsl(222, 26%, 31%);
+    --toggleAndKeypadBg: hsl(223, 31%, 20%);
+    --inputBg: hsl(224, 36%, 15%);
+    --btn-bgcolor: hsl(30, 25%, 89%);
+    --btn-shadow: hsl(28, 16%, 65%);
 
     /*FOREGROUND COLORS*/
-    --PrimaryFg: ;
-    --SecondaryFg : ;
+    --PrimaryFg: hsl(0, 0%, 100%);
+    --SecondaryFg : hsl(221, 14%, 31%);
 
     /*EQUAL AND TOGGLE BACKGROUND AND SHADOW ONLY FOR EQUAL*/
-    --EqualAndToggleBg: ;
-    --EqualShadow: ;
+    --EqualAndToggleBg: hsl(6, 63%, 50%) ;
+    --EqualShadow: hsl(6, 70%, 34%) ;
 
     /*DELETE AND RESET BUTTONS BACKGROUND AND SHADOW*/
-    --DelAndResetBg: ;
-    --DelAndResetShadow: ;
+    --DelAndResetBg: hsl(225, 21%, 49%);
+    --DelAndResetShadow: hsl(224, 28%, 35%);
 
 
     --fontsize-h1:2rem;
@@ -32,6 +34,11 @@
 
 body{
     font-family: "Spartan", sans-serif;
+    background-color: var(--mainBg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1{
@@ -47,6 +54,8 @@ h2{
 
 section{
     padding: 1.5rem;
+    max-width: 500px;
+    color: var(--PrimaryFg);
 }
 
 div{
@@ -55,22 +64,23 @@ div{
 
 input{
     font-size: 2rem;
-    padding: .9rem;
+    padding: 1.2rem;
     text-align: end;
     width: 100%;
     margin: 1.5rem 0 1rem;
     border-radius: .4rem;
     border-style: none;
+    background-color: var(--inputBg);
 }
 
 button{
     font-size: 2rem;
     border-style: none;
-    padding: 1rem;
+    padding: .7rem;
     /* flex-grow: 1; */
     flex: 1 0 20%;
     border-radius: .4rem;
-    /* background-color: var(--btn-bgcolor); */
+    background-color: var(--btn-bgcolor);
 }
 
 .grid{
@@ -78,14 +88,23 @@ button{
     gap: .9rem;
     padding: 1rem;
     justify-content: space-between;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: .4rem;
+    color: var(--SecondaryFg);
 }
 
 .grid--fontsize{
+    --PrimaryFg:hsl(0, 0%, 100%);
     font-size: .9rem;
+    color: var(--PrimaryFg);
 }
 
 .grid--padding{
     padding: 1.5rem;
+}
+
+.grid--bg{
+    background-color: var(--DelAndResetBg);
 }
 
 /*TOP SECTION*/
@@ -96,17 +115,18 @@ button{
 }
 
 .toggle{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 70px;
     padding: 0.2rem;
     border-radius: 2rem;
+    background-color: hsl(223, 31%, 20%);
 }
 
 .toggle__circle{
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: crimson;
+    background-color: var(--EqualAndToggleBg);
 }
 
 .theme__choices{
@@ -119,4 +139,10 @@ button{
 
 .theme{
     align-items: flex-end;
+}
+
+/*EQUAL BUTTON STYLE*/
+#equal{
+    
+    background-color: var(--EqualAndToggleBg);
 }
