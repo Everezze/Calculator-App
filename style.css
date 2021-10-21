@@ -1,5 +1,21 @@
 :root{
-    --btn-bgcolor: ;
+
+    /*MAIN BACKGROUNDS*/
+    --mainBg: ;
+    --toggleAndKeypadBg: ;
+    --inputBg: ;
+
+    /*FOREGROUND COLORS*/
+    --PrimaryFg: ;
+    --SecondaryFg : ;
+
+    /*EQUAL AND TOGGLE BACKGROUND AND SHADOW ONLY FOR EQUAL*/
+    --EqualAndToggleBg: ;
+    --EqualShadow: ;
+
+    /*DELETE AND RESET BUTTONS BACKGROUND AND SHADOW*/
+    --DelAndResetBg: ;
+    --DelAndResetShadow: ;
 
 
     --fontsize-h1:2rem;
@@ -11,6 +27,7 @@
     padding: 0;
     margin: 0;
     font-family: inherit;
+    color: inherit;
 }
 
 body{
