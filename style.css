@@ -4,6 +4,8 @@
     --mainBg: hsl(222, 26%, 31%);
     --toggleAndKeypadBg: hsl(223, 31%, 20%);
     --inputBg: hsl(224, 36%, 15%);
+
+
     --btn-bgcolor: hsl(30, 25%, 89%);
     --btn-shadow: hsl(28, 16%, 65%);
 
@@ -81,6 +83,7 @@ button{
     flex: 1 0 20%;
     border-radius: .4rem;
     background-color: var(--btn-bgcolor);
+    /* box-shadow: ; */
 }
 
 .grid{
@@ -88,7 +91,7 @@ button{
     gap: .9rem;
     padding: 1rem;
     justify-content: space-between;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--toggleAndKeypadBg);
     border-radius: .4rem;
     color: var(--SecondaryFg);
 }
@@ -119,7 +122,7 @@ button{
     width: 70px;
     padding: 0.2rem;
     border-radius: 2rem;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--toggleAndKeypadBg);
 }
 
 .toggle__circle{
