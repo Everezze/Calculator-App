@@ -1,25 +1,16 @@
 :root{
 
-    /*MAIN BACKGROUNDS*/
+    /* MAIN BACKGROUNDS */
     --mainBg: hsl(222, 26%, 31%);
     --toggleAndKeypadBg: hsl(223, 31%, 20%);
     --inputBg: hsl(224, 36%, 15%);
 
-
+    /* BUTTONS COLORS */
     --btn-bgcolor: hsl(30, 25%, 89%);
     --btn-shadow: hsl(28, 16%, 65%);
 
-    /*FOREGROUND COLORS*/
+    /* FOREGROUND COLORS */
     --PrimaryFg: hsl(0, 0%, 100%);
-    --SecondaryFg : hsl(221, 14%, 31%);
-
-    /*EQUAL AND TOGGLE BACKGROUND AND SHADOW ONLY FOR EQUAL*/
-    --EqualAndToggleBg: hsl(6, 63%, 50%) ;
-    --EqualShadow: hsl(6, 70%, 34%) ;
-
-    /*DELETE AND RESET BUTTONS BACKGROUND AND SHADOW*/
-    --DelAndResetBg: hsl(225, 21%, 49%);
-    --DelAndResetShadow: hsl(224, 28%, 35%);
 
 
     --fontsize-h1:2rem;
@@ -76,6 +67,7 @@ input{
 }
 
 button{
+    --PrimaryFg: hsl(221, 14%, 31%);
     font-size: 2rem;
     border-style: none;
     padding: .7rem;
@@ -83,7 +75,9 @@ button{
     flex: 1 0 20%;
     border-radius: .4rem;
     background-color: var(--btn-bgcolor);
-    /* box-shadow: ; */
+    /* box-shadow: x y z var(--btn-shadow); */
+    color: var(--PrimaryFg);
+
 }
 
 .grid{
@@ -93,13 +87,11 @@ button{
     justify-content: space-between;
     background-color: var(--toggleAndKeypadBg);
     border-radius: .4rem;
-    color: var(--SecondaryFg);
 }
 
 .grid--fontsize{
-    --PrimaryFg:hsl(0, 0%, 100%);
+    /* --PrimaryFg:hsl(0, 0%, 100%); */
     font-size: .9rem;
-    color: var(--PrimaryFg);
 }
 
 .grid--padding{
@@ -107,7 +99,9 @@ button{
 }
 
 .grid--bg{
-    background-color: var(--DelAndResetBg);
+    --PrimaryFg:hsl(0, 0%, 100%);
+    --btn-shadow:hsl(28, 16%, 65%);
+    --btn-bgcolor: hsl(225, 21%, 49%);
 }
 
 /*TOP SECTION*/
@@ -125,11 +119,12 @@ button{
     background-color: var(--toggleAndKeypadBg);
 }
 
-.toggle__circle{
+#toggle__circle{
+    --btn-bgcolor:hsl(6, 63%, 50%);
+    background-color: var(--btn-bgcolor);
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: var(--EqualAndToggleBg);
 }
 
 .theme__choices{
@@ -146,6 +141,22 @@ button{
 
 /*EQUAL BUTTON STYLE*/
 #equal{
-    
-    background-color: var(--EqualAndToggleBg);
+    --PrimaryFg:hsl(0, 0%, 100%);
+    --btn-bgcolor:hsl(6, 63%, 50%);
+    --btn-shadow:hsl(6, 70%, 34%);
+    /* background-color: var(--btn-bgcolor); */
 }
+
+#toggle__circle.themeTwo{
+    margin-left: calc(50% - 8px);
+}
+
+#toggle__circle.themeThree{
+    margin-left: calc(100% - 16.4px);
+}
+
+.theme__numbers{
+    font-size: var(--fontsize-h2);
+    margin-bottom: .3rem;
+}
+
